@@ -10,13 +10,16 @@
 
 enum State {SLEEPING, EATING};
 
-class Philosopher {
+class Philosopher
+{
 public:
+    Philosopher();
     Philosopher(Fork&, Fork&);
     ~Philosopher();
 
     int getId();
 
+    void start();
 
 private:
     static int idCntr;
@@ -24,11 +27,11 @@ private:
 
     int id;
     State state;
-    std::thread thread;
+    std::thread thr;
     std::pair<Fork*, Fork*> forks;
+    int points=0;
 
     void run();
-
 };
 
 

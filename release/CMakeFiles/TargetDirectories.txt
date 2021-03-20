@@ -1,0 +1,3 @@
+A:/SZKOLA/SEMESTR - 6/SO2-P - Szyc/p1/release/CMakeFiles/p1.dir
+A:/SZKOLA/SEMESTR - 6/SO2-P - Szyc/p1/release/CMakeFiles/edit_cache.dir
+A:/SZKOLA/SEMESTR - 6/SO2-P - Szyc/p1/release/CMakeFiles/rebuild_cache.dir
