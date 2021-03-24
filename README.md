@@ -18,6 +18,6 @@ The dining philosophers problem is invented by E. W. Dijkstra. Imagine that five
 
 
 # Step 1 - learn ncurses
-#include<ncurses.h> is used in order to better visualise the final product of implementation.
+#include<ncurses.h> is used in order to have a nicer look of final product of implementation.
 
 ![Alt text](/readme-files/readme-ncurses.png?raw=true "learning ncurses")
