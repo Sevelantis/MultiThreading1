@@ -13,7 +13,7 @@ The dining philosophers problem is invented by E. W. Dijkstra. Imagine that five
 - VS Code
 - g++ compiler
 - ncurses library for better visualisation
-- In order to build binary **properly**, there is a need to set appropriate flags *on the end* of compiling command(take a look at file tasks.json):
+- In order to build binary executable file **properly**, there is a need to set appropriate flags *on the end* of compiling command(take a look at file tasks.json):
   - /usr/bin/g++ -g ${file} -o ${fileDirname}/${fileBasenameNoExtension} **-pthread -lncurses**
 
 
