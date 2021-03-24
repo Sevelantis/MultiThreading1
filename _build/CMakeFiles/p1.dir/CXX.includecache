@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jednorozecxd/Desktop/SO2-P/p1/fork/Fork.cpp
+Fork.h
+/home/jednorozecxd/Desktop/SO2-P/p1/fork/Fork.h
+
+/home/jednorozecxd/Desktop/SO2-P/p1/fork/Fork.h
+mutex
+-
+
+/home/jednorozecxd/Desktop/SO2-P/p1/main.cpp
+iostream
+-
+vector
+-
+ncurses.h
+-
+philosopher/Philosopher.h
+/home/jednorozecxd/Desktop/SO2-P/p1/philosopher/Philosopher.h
+
+/home/jednorozecxd/Desktop/SO2-P/p1/philosopher/Philosopher.cpp
+iostream
+-
+Philosopher.h
+/home/jednorozecxd/Desktop/SO2-P/p1/philosopher/Philosopher.h
+
+/home/jednorozecxd/Desktop/SO2-P/p1/philosopher/Philosopher.h
+thread
+-
+../fork/Fork.h
+/home/jednorozecxd/Desktop/SO2-P/p1/fork/Fork.h
+

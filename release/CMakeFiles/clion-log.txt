@@ -1,4 +1,0 @@
-"A:\ProgramFiles\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" "A:\SZKOLA\SEMESTR - 6\SO2-P - Szyc\p1"
--- Configuring done
--- Generating done
--- Build files have been written to: A:/SZKOLA/SEMESTR - 6/SO2-P - Szyc/p1/release
