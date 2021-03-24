@@ -1,4 +1,0 @@
-/home/jednorozecxd/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/jednorozecxd/Desktop/SO2-P/p1
--- Configuring done
--- Generating done
--- Build files have been written to: /home/jednorozecxd/Desktop/SO2-P/p1/_release
