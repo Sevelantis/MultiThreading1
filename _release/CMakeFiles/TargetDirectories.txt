@@ -1,3 +1,0 @@
-/home/jednorozecxd/Desktop/SO2-P/p1/_release/CMakeFiles/rebuild_cache.dir
-/home/jednorozecxd/Desktop/SO2-P/p1/_release/CMakeFiles/edit_cache.dir
-/home/jednorozecxd/Desktop/SO2-P/p1/_release/CMakeFiles/p1.dir
