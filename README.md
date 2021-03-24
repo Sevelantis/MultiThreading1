@@ -10,7 +10,7 @@ The dining philosophers problem is invented by E. W. Dijkstra. Imagine that five
 
 ## Project environment settings
 - Linux Ubuntu 20.04
-- VS Code
+- VS Code with a bunch of handy extensions
 - g++ compiler
 - ncurses library for better visualisation
 - In order to build binary executable file **properly**, there is a need to set appropriate flags *on the end* of compiling command(take a look at file tasks.json):
