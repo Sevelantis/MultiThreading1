@@ -14,7 +14,7 @@ The dining philosophers problem is invented by E. W. Dijkstra. Imagine that five
 - g++ compiler
 - ncurses library for better visualisation
 - It's important to set appropriate flags *on the end* of compiling command:
-  - /usr/bin/g++" -g ${file} -o ${fileDirname}/${fileBasenameNoExtension} **-pthread -lncurses**
+  - /usr/bin/g++ -g ${file} -o ${fileDirname}/${fileBasenameNoExtension} **-pthread -lncurses**
 
 
 # Step 1 - learn ncurses
