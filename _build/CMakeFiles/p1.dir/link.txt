@@ -1,1 +1,0 @@
-/usr/bin/g++  -pthread -lncurses -g   CMakeFiles/p1.dir/main.cpp.o CMakeFiles/p1.dir/philosopher/Philosopher.cpp.o CMakeFiles/p1.dir/fork/Fork.cpp.o  -o p1  -lncurses 
