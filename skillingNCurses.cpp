@@ -55,14 +55,14 @@ int main()
     init_pair(8, COLOR_RED, COLOR_BLACK);
 
     const int SIZE = 30;
-    char menuItem[][SIZE] = {{"Wypisz szajs!"},
-                                    {"Pusc kwadrata!"},
-                                    {"wyjdz..."},
+    char menuItem[][SIZE] = {{"menu 1 itemeeek ;PPP!"},
+                                    {"Pusc kwadrata ;ppp!"},
+                                    {"wyjdz...... :("},
                                     {"aaaaaaa"},
                                     {"bbbbbb"},
                                     {"ccccccc"},
                                     {"ddddddd"},
-                                    {"dupa"},
+                                    {"!!!!!!!!!!!!!!!!!!! H"},
                                     {"#fFFFFFFFFFFFF"},
                                     {"#AARGRERAGH"},
                                     {"#AERGRAWEGH"},
