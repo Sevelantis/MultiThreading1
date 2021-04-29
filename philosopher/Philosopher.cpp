@@ -1,7 +1,7 @@
 //
 // Created by oskro on 14 mar 2021.
 //
-#include<iostream>
+#include <ncurses.h>
 #include "Philosopher.h"
 
 using namespace std;
@@ -13,21 +13,23 @@ void Philosopher::run()
 {
     while(feast)
     {
-        cout << id << " ";
+        attron(COLOR_PAIR(3)); printw("philosopher with ID =  %d is eating", id);
     }
 }
 
-Philosopher::Philosopher(Fork &f1, Fork &f2)
+Philosopher::Philosopher(Fork *f1, Fork *f2)
 {
-    this->forks.first = &f1;
-    this->forks.second = &f2;
     this->id = idCntr++;
+    this->forks.first = f1;
+    this->forks.second = f2;
 
-    cout << feast << " and "<< id << endl;
+    attron(COLOR_PAIR(2)); printw("new philosopher created, id\t->\t%d", id);
+    printw("\t he has forks with ID's : %d and %d", f1->getId() ,f2->getId());
 }
 
 Philosopher::~Philosopher()
 {
+    attron(COLOR_PAIR(1)); printw("philosopher with ID %d is destroyed.",id);
     feast = false;
     thr.join();
 }

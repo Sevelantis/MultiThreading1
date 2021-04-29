@@ -14,7 +14,7 @@ class Philosopher
 {
 public:
     Philosopher();
-    Philosopher(Fork&, Fork&);
+    Philosopher(Fork*, Fork*);
     ~Philosopher();
 
     int getId();

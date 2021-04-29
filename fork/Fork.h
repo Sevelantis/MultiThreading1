@@ -5,7 +5,6 @@
 #ifndef P1_FORK_H
 #define P1_FORK_H
 
-
 #include <mutex>
 
 class Fork
@@ -14,7 +13,9 @@ public:
     Fork();
     ~Fork();
 
+    void setOwnerId(int);
     int getId();
+
 private:
     static int idCntr;
 
