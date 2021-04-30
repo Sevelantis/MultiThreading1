@@ -9,7 +9,6 @@ int Fork::idCntr = 0;
 Fork::Fork()
 {
     this->id = idCntr++;
-    printw("new fork created, id\t->\t %d",id);
 }
 
 void Fork::setOwnerId(int ownerId)
@@ -24,5 +23,5 @@ int Fork::getId()
 
 Fork::~Fork()
 {
-    attron(COLOR_PAIR(1)); printw("fork destroyed");
+    attron(COLOR_PAIR(1)); printw("fork destroyed\n");
 }

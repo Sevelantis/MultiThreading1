@@ -6,6 +6,7 @@
 #define P1_PHILOSOPHER_H
 
 #include <thread>
+#include <random>
 #include "../fork/Fork.h"
 
 enum State {SLEEPING, EATING};
@@ -18,12 +19,14 @@ public:
     ~Philosopher();
 
     int getId();
-
+    int getVal();
     void start();
 
 private:
     static int idCntr;
     static bool feast;
+
+    int val = rand() % 200;
 
     int id;
     State state;
