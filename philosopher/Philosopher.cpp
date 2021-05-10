@@ -54,26 +54,6 @@ void Philosopher::kill()
     thr.join();
 }
 
-int Philosopher::getId()
-{
-    return id;
-}
-
-int Philosopher::getEatingPoints()
-{
-    return eatingPoints;
-}
-
-int Philosopher::getSleepingPoints()
-{
-    return sleepingPoints;
-}
-
-std::pair<int,int> Philosopher::getForksIds()
-{
-    return make_pair(forks.first->getId(), forks.second->getId());
-}
-
 std::string Philosopher::getInfo()
 {
     // build a string to print it on the screen

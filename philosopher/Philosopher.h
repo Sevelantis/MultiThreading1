@@ -21,14 +21,9 @@ public:
     void start();
     void kill();
 
+    bool isEating();
     std::string getInfo();
 
-    // maybe
-    int getId();
-    bool isEating();
-    int getSleepingPoints();
-    int getEatingPoints();
-    std::pair<int,int> getForksIds();
 
 private:
     static int idCntr;
