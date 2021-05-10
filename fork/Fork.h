@@ -13,8 +13,9 @@ public:
     Fork();
     ~Fork();
 
-    void setOwnerId(int);
     int getId();
+    void lock(int);
+    void unlock();
 
 private:
     static int idCntr;

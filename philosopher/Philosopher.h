@@ -7,34 +7,44 @@
 
 #include <thread>
 #include <random>
+#include <string>
 #include "../fork/Fork.h"
 
-enum State {SLEEPING, EATING};
+enum State {SLEEPING, EATING, WAITING};
 
 class Philosopher
 {
 public:
-    Philosopher();
     Philosopher(Fork*, Fork*);
     ~Philosopher();
 
-    int getId();
-    int getVal();
     void start();
+    void kill();
+
+    std::string getInfo();
+
+    // maybe
+    int getId();
+    bool isEating();
+    int getSleepingPoints();
+    int getEatingPoints();
+    std::pair<int,int> getForksIds();
 
 private:
     static int idCntr;
     static bool feast;
 
-    int val = rand() % 200;
-
     int id;
     State state;
     std::thread thr;
     std::pair<Fork*, Fork*> forks;
-    int points=0;
+    int sleepingPoints=0, sleepingPointsMax=100;
+    int eatingPoints=0, eatingPointsMax=100;
+    int eatCntr=0;
 
     void run();
+    bool isFull();
+    bool isHungry();
 };
 
 

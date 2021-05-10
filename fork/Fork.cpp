@@ -1,6 +1,8 @@
 //
 // Created by oskro on 14 mar 2021.
 //
+#define NONE -1
+
 #include "Fork.h"
 #include <ncurses.h>
 
@@ -11,9 +13,16 @@ Fork::Fork()
     this->id = idCntr++;
 }
 
-void Fork::setOwnerId(int ownerId)
+void Fork::lock(int ownerId)
 {
+    mutex.lock();
     this->ownerId = ownerId;
+}
+
+void Fork::unlock()
+{
+    mutex.unlock();
+    this->ownerId = NONE;
 }
 
 int Fork::getId()
@@ -23,5 +32,5 @@ int Fork::getId()
 
 Fork::~Fork()
 {
-    attron(COLOR_PAIR(1)); printw("fork destroyed\n");
+    
 }
