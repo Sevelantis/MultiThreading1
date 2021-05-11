@@ -24,7 +24,6 @@ public:
     bool isEating();
     std::string getInfo();
 
-
 private:
     static int idCntr;
     static bool feast;
@@ -41,7 +40,6 @@ private:
     void run();
     bool isFull();
     bool isHungry();
-    bool isForksFree();
 
     void updateClockRate();
 };

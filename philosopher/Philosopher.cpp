@@ -5,13 +5,16 @@
 #include <random>
 #include "Philosopher.h"
 
-#define CLOCK_RATE 100 //[us] 1000us = 1ms
+#define CLOCK_RATE 1000 //[us] 1000us = 1ms
 
 using namespace std;
 
 bool Philosopher::feast = true;
 int Philosopher::idCntr = 0;
 
+/*
+*   Solution using the resource hierarchy 
+*/
 void Philosopher::run()
 {
     while(feast)
@@ -26,15 +29,12 @@ void Philosopher::run()
         }
         else if(state==WAITING)
         {
-            if(isForksFree())
-            {
-                forks.first->lock(id);
-                forks.second->lock(id);
-                
-                state = EATING;
-                sleepingPoints=0;
-                updateClockRate();
-            }
+            forks.first->lock();
+            forks.second->lock();
+            
+            state = EATING;
+            sleepingPoints=0;
+            updateClockRate();
         }
         else if (state==EATING)
         {
@@ -87,11 +87,6 @@ std::string Philosopher::getInfo()
         tmp.append("EATING... eating points\t\t->\t"+to_string(eatingPoints)+"\t\t"+to_string(eatCntr));
 
     return tmp;
-}
-
-bool Philosopher::isForksFree()
-{
-    return forks.first->isUnlocked() && forks.second->isUnlocked();
 }
 
 bool Philosopher::isFull()
