@@ -14,10 +14,12 @@ public:
     ~Fork();
 
     int getId();
+    bool isUnlocked();
     void lock(int);
     void unlock();
 
 private:
+
     static int idCntr;
 
     int id;

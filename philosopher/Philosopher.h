@@ -36,10 +36,14 @@ private:
     int sleepingPoints=0, sleepingPointsMax=100;
     int eatingPoints=0, eatingPointsMax=100;
     int eatCntr=0;
+    int clockRate;
 
     void run();
     bool isFull();
     bool isHungry();
+    bool isForksFree();
+
+    void updateClockRate();
 };
 
 

@@ -11,7 +11,14 @@ int Fork::idCntr = 0;
 Fork::Fork()
 {
     this->id = idCntr++;
+    this->ownerId = NONE;
 }
+
+bool Fork::isUnlocked()
+{
+    return (ownerId == NONE) ?
+    true : false;
+} 
 
 void Fork::lock(int ownerId)
 {

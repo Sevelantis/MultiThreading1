@@ -15,7 +15,7 @@ void initMessages(int);
 void checkExit(bool &);
 void updateScreen(bool &, vector<Philosopher*> &);
 
-//variables
+// variables
 int N = 5;
 
 int main()
@@ -44,10 +44,7 @@ int main()
     threadExit.join(); // wait for threadExit exit todo
     threadScreen.join();
 
-    // free thread locks
-    for (int i = 0; i < N; i++)     forks[i]->unlock();
-
-    // join philosopher threads
+    // join philosopher threads (automatic free all mutexes)
     for (int i = 0; i < N; i++)     philosophers[i]->kill();
 
     // clear memory
@@ -84,7 +81,7 @@ void updateScreen(bool &running, vector<Philosopher*> &pV)
         {
             int color = -1;
             // color for eating philosophers
-            if(pV[i]->isEating())   color = 2;
+            if(pV[i]->isEating())   color = 4;
             else                    color = 0;
             attron(COLOR_PAIR(color));
             //display
@@ -93,7 +90,7 @@ void updateScreen(bool &running, vector<Philosopher*> &pV)
         }
         
         refresh();
-        std::this_thread::sleep_for(std::chrono::milliseconds(30));
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }
 
