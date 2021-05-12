@@ -29,8 +29,10 @@ int main()
     // create forks
     for (int i = 0; i < N; i++)     forks[i] = new Fork();
     
-    // create philosophers
-    for (int i = 0; i < N; i++)     philosophers[i] = new Philosopher(forks[i],forks[(i+1)%N]);
+    // create philosophers & assign their forks
+    // Solution using the resource hierarchy (last philosopher has to grab his right fork firstly)
+    for (int i = 0; i < N-1; i++)   philosophers[i] = new Philosopher(forks[i],forks[i+1]);
+    philosophers[N-1] = new Philosopher(forks[0], forks[N-1]);
     
     // handle exit on (press 'q'), screen updating
     bool running = true;
@@ -41,7 +43,7 @@ int main()
     for (int i = 0; i < N; i++)     philosophers[i]->start();
     
     // join threads    
-    threadExit.join(); // wait for threadExit exit todo
+    threadExit.join();
     threadScreen.join();
 
     // join philosopher threads (automatic free all mutexes)
@@ -64,6 +66,8 @@ void checkExit(bool &running)
 
     running = false;
 }
+
+mutex mtx;
 
 void updateScreen(bool &running, vector<Philosopher*> &pV)
 {
@@ -88,7 +92,7 @@ void updateScreen(bool &running, vector<Philosopher*> &pV)
             mvprintw(rows, cols, "%s", pV[i]->getInfo().c_str());
             attroff(COLOR_PAIR(color));
         }
-        
+
         refresh();
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }

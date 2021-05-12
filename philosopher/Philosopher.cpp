@@ -5,7 +5,7 @@
 #include <random>
 #include "Philosopher.h"
 
-#define CLOCK_RATE 1000 //[us] 1000us = 1ms
+#define CLOCK_RATE 30000 //[us] 1000us = 1ms
 
 using namespace std;
 
@@ -74,7 +74,7 @@ void Philosopher::kill()
 
 std::string Philosopher::getInfo()
 {
-    // build a string to print it on the screen
+    // build a string that will be printed on the screen
     string tmp = "Philosopher[";
     tmp.append(to_string(id));
     tmp.append("] has forks ");
