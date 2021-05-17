@@ -21,3 +21,8 @@ The dining philosophers problem is invented by E. W. Dijkstra. Imagine that five
 #include<ncurses.h> is used in order to have a nicer look of final product of implementation.
 
 ![Alt text](/readme-files/readme-ncurses.png?raw=true "learning ncurses")
+
+# Step 2 - Solve the Dinning Philosophers Problem
+This solution is based on the 'resources hierarchy' system - every philosopher has to grab a fork to his left, except the last one, who is programmed to pick his right fork firstly. This eliminates the deadlock - situation when every philosopher grabs one fork and waits for another, while every single one is taken.
+
+![Alt text](/readme-files/program-run.png?raw=true "program run")
