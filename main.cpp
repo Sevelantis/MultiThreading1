@@ -67,8 +67,6 @@ void checkExit(bool &running)
     running = false;
 }
 
-mutex mtx;
-
 void updateScreen(bool &running, vector<Philosopher*> &pV)
 {
     while(running)
